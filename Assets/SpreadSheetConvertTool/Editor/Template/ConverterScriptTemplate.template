@@ -1,0 +1,25 @@
+﻿using UnityEngine;
+using charcolle.Utility.SpreadSheetConvertTool;
+
+using GoogleSpreadSheetAPIClass = charcolle.Utility.SpreadSheetConvertTool.SpreadSheetAPIClass;
+
+public class #SCRIPTNAME# : GoogleSpreadSheetConverter {
+
+    public override void Convert( GoogleSpreadSheetAPIClass data ) {
+
+        // sample script
+        //var Data  = ScriptableObject.CreateInstance<Hoge>();
+        //Data.item = new List<Foo>();
+        //for( int i    = 0; i < data.RowCount; i++ ) {
+        //    var item  = new Foo();
+        //    item.id   = int.Parse( data.Data[ i ][ 0 ] );
+        //    item.name = data.Data[ i ][ 1 ];
+        //    Data.item.Add( item );
+        //}
+
+		// You can save your data with this method.
+        //Save( Data );
+
+    }
+
+}
