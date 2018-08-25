@@ -8,7 +8,7 @@ Useful tool to make converter of GoogleSpreadSheet.
 Unity 2017.1 or higher  
   
 ### All you need is
-◆ClientID 
+◆ClientID  
 ◆ClientSecret  
 ◆RefreshToken  
   
