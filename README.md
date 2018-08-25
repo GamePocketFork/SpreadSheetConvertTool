@@ -12,7 +12,7 @@ Unity 2017.1 or higher
 ◆ClientSecret  
 ◆RefreshToken  
   
-◆Sour SpreadSheetId  
+◆Your SpreadSheetId  
   
 # Usage(In Progress)
 ## ◆Open Editor
