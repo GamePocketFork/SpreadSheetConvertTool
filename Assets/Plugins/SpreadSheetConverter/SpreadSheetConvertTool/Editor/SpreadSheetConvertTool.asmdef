@@ -1,0 +1,10 @@
+{
+    "name": "SpreadSheetConvertTool",
+    "references": [
+        "SpreadSheetConverter"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": []
+}

@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43e03d38f9eaf9541a6f6cb347b33c04, type: 3}
+  m_Name: SampleData
+  m_EditorClassIdentifier: 
+  Name: SampleData
+  Id: 
+  UseDefaultAccessToken: 0
+  OAuthClientId: 
+  OAuthClientSecret: 
+  RefreshToken: 
+  AccessToken: 
+  Sheets:
+  - sheet1
+  - sheet2
+  - sheet3
+  - sheet4
+  - "\u30B7\u30FC\u30C85"
+  Converter:
+  - {fileID: 114841273596765044}
+  - {fileID: 114398404674220932}
+--- !u!114 &114398404674220932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0506fd7530aa4e647bc886c0732aee41, type: 3}
+  m_Name: RuntimeConverter
+  m_EditorClassIdentifier: 
+  ConverterName: RuntimeConverter
+  SheetName: sheet1
+  SheetDesc: about this converter
+  ScriptName: RuntimeConverter
+  MultiSheetConvertMode: 0
+  SheetIndexRange: {x: 1, y: 1}
+  MinSheetIndex: 1
+  MaxSheetIndex: 20
+  RowRange: {x: 1, y: 2}
+  ColRange: {x: 1, y: 2}
+  StartRow: 1
+  StartCol: 1
+  MaxRow: 20
+  MaxCol: 20
+  UseAutomaticEnd: 1
+  SavePath: 
+  SaveFileName: 
+  SaveFileExtension: 
+--- !u!114 &114841273596765044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1229c083968b4ab4aaad93e889e1a695, type: 3}
+  m_Name: CSVConverter
+  m_EditorClassIdentifier: 
+  ConverterName: CSVConverter
+  SheetName: sheet1
+  SheetDesc: about this converter
+  ScriptName: CSVConverter
+  MultiSheetConvertMode: 0
+  SheetIndexRange: {x: 1, y: 1}
+  MinSheetIndex: 1
+  MaxSheetIndex: 20
+  RowRange: {x: 1, y: 2}
+  ColRange: {x: 1, y: 2}
+  StartRow: 1
+  StartCol: 1
+  MaxRow: 20
+  MaxCol: 20
+  UseAutomaticEnd: 1
+  SavePath: 
+  SaveFileName: hoge
+  SaveFileExtension: csv

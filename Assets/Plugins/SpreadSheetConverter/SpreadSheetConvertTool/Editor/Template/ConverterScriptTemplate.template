@@ -1,0 +1,21 @@
+﻿using charcolle.SpreadSheetConverter;
+
+public class #SCRIPTNAME# : GoogleSpreadSheetConverter {
+
+    protected override void Convert( SpreadSheetAPIClass data ) {
+
+        //string csv = "";
+        //for( int i = 0; i < data.RowCount; i++ ) {
+        //    for( int j = 0; j < data.ColCount; j++ ) {
+        //        csv += data.Data[ i ][ j ];
+        //        csv += ",";
+        //    }
+        //    csv += "\n";
+        //}
+
+        //// You can save your data with this method.
+        //Save( csv );
+
+    }
+
+}
