@@ -13,17 +13,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: SampleData
   Id: 
-  UseDefaultAccessToken: 0
+  UseDefaultAccessToken: 1
   OAuthClientId: 
   OAuthClientSecret: 
   RefreshToken: 
   AccessToken: 
-  Sheets:
-  - sheet1
-  - sheet2
-  - sheet3
-  - sheet4
-  - "\u30B7\u30FC\u30C85"
+  Sheets: []
   Converter:
   - {fileID: 114841273596765044}
   - {fileID: 114398404674220932}
@@ -82,6 +77,6 @@ MonoBehaviour:
   MaxRow: 20
   MaxCol: 20
   UseAutomaticEnd: 1
-  SavePath: 
+  SavePath: Assets
   SaveFileName: hoge
   SaveFileExtension: csv

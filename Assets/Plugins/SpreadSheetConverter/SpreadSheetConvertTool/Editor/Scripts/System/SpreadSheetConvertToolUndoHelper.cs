@@ -4,14 +4,16 @@ namespace charcolle.SpreadSheetConverter {
 
     internal class UndoHelper {
 
-        public readonly static string UNDO_WIN_CHANGE = "window change";
+        public readonly static string UNDO_WIN_CHANGE          = "window change";
 
-        public readonly static string UNDO_SS_CHANGE = "change spreadsheet";
-        public readonly static string UNDO_SS_EDIT = "edit spreadsheet config";
+        public readonly static string UNDO_SS_CHANGE           = "change spreadsheet";
+        public readonly static string UNDO_SS_EDIT             = "edit spreadsheet config";
         public readonly static string UNDO_SS_CREATE_CONVERTER = "create converter";
         public readonly static string UNDO_SS_DELETE_CONVERTER = "delete converter";
 
-        public readonly static string UNDO_CONVERTER_EDIT = "edit converter";
+        public readonly static string UNDO_CONVERTER_EDIT      = "edit converter";
+
+        public readonly static string UNDO_GOOGLEAPI_EDIT      = "edit Authorization requests";
 
         public static void ConverterUndo( GoogleSpreadSheetConverter converter, string text ) {
             if( converter != null )
@@ -19,6 +21,11 @@ namespace charcolle.SpreadSheetConverter {
         }
 
         public static void SpreadSheetUndo( GoogleSpreadSheetConfig spreadSheet, string text ) {
+            if( spreadSheet != null )
+                Undo.RecordObject( spreadSheet, text );
+        }
+
+        public static void GoogleAPIOAuthUndo( GoogleAPIOAuthEditorConfig spreadSheet, string text ) {
             if( spreadSheet != null )
                 Undo.RecordObject( spreadSheet, text );
         }

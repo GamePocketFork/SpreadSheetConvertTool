@@ -2,6 +2,9 @@
 using UnityEditor;
 using UnityEngine;
 
+using UndoHelper = charcolle.SpreadSheetConverter.UndoHelper;
+using GUIHelper  = charcolle.SpreadSheetConverter.GUIHelper;
+
 namespace charcolle.SpreadSheetConverter {
 
     internal class GoogleAPIOAuthConfigEditorGUI : EditorWindowItem<GoogleAPIOAuthEditorConfig> {
@@ -13,11 +16,13 @@ namespace charcolle.SpreadSheetConverter {
             EditorGUILayout.BeginVertical();
             {
                 GUILayout.Space( 5 );
-                GUILayout.Label( "<b>Default Setting</b>" );
+                GUILayout.Label( "<b>Default OAuth Client</b>" );
                 GUILayout.Space( 5 );
 
                 var defaultWidth            = EditorGUIUtility.labelWidth;
                 EditorGUIUtility.labelWidth = 100;
+                Undo.IncrementCurrentGroup();
+                UndoHelper.GoogleAPIOAuthUndo( data, UndoHelper.UNDO_GOOGLEAPI_EDIT );
                 OAuthClientId               = EditorGUILayout.TextField( "ClientID", OAuthClientId, GUIHelper.Styles.TextFieldWordWrap );
                 OAuthClientSecret           = EditorGUILayout.TextField( "ClientSecret", OAuthClientSecret, GUIHelper.Styles.TextFieldWordWrap );
                 RefreshToken                = EditorGUILayout.TextField( "RefreshToken", RefreshToken, GUIHelper.Styles.TextFieldWordWrap );

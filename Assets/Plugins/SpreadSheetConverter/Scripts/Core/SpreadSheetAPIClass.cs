@@ -11,7 +11,7 @@ namespace charcolle.SpreadSheetConverter {
         public int ColCount;
 
         private readonly static string KEY_VALUES = "values";
-        private readonly static string KEY_ERROR = "error_description";
+        private readonly static string KEY_ERROR  = "error_description";
 
         public SpreadSheetAPIClass( string res, string sheetName ) {
             SheetName = sheetName;

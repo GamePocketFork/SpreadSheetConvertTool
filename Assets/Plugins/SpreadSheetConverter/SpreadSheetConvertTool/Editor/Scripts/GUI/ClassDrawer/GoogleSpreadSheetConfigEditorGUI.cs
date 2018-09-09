@@ -148,7 +148,7 @@ namespace charcolle.SpreadSheetConverter {
 
             EditorGUILayout.BeginHorizontal();
             {
-                var usetoken = GUILayout.Toggle( UseDefaultAccessToken, "Use Default Access Token" );
+                var usetoken = GUILayout.Toggle( UseDefaultAccessToken, "Use Default OAuth Config" );
                 if( usetoken != UseDefaultAccessToken ) {
                     Undo.IncrementCurrentGroup();
                     UndoHelper.SpreadSheetUndo( data, UndoHelper.UNDO_SS_EDIT );

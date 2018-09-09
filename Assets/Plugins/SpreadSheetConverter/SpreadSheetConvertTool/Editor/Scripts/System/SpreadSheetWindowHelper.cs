@@ -11,7 +11,7 @@ namespace charcolle.SpreadSheetConverter {
         public readonly static string WINDOW_TITLE = "SheetConverter";
         public readonly static Vector2 WINDOW_SIZE = new Vector2( 350, 200 );
 
-        public readonly static string[] MENU_WINDOW = new string[] { "SpreadSheets", "Config" };
+        public readonly static string[] MENU_WINDOW = new string[] { "SpreadSheets", "OAuth Config" };
 
         public static List<GoogleSpreadSheetConfig> SpreadSheets = new List<GoogleSpreadSheetConfig>();
 
