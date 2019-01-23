@@ -19,8 +19,11 @@ namespace charcolle.SpreadSheetConverter {
         private SpreadSheetConvertToolPopupWindow popupWin;
         private SpreadSheetConverterTestAPIPopupWindow textAPIWin;
 
+        [SerializeField]
         private GoogleAPIOAuthConfigEditorGUI OAuthConfigItem;
+        [SerializeField]
         private GoogleSpreadSheetConfigEditorGUI SpreadSheetConfigItem;
+        [SerializeField]
         private GoogleSpreadSheetConverterEditorGUI ConverterItem;
 
         //======================================================================
@@ -50,10 +53,10 @@ namespace charcolle.SpreadSheetConverter {
 
             if( OAuthConfigItem == null )
                 OAuthConfigItem = new GoogleAPIOAuthConfigEditorGUI( GoogleAPIOAuthEditorConfig.Instance );
-            if( SpreadSheetConfigItem == null )
+            if( SpreadSheetConfigItem == null ) {
                 SpreadSheetConfigItem = new GoogleSpreadSheetConfigEditorGUI( SelectedSpreadSheet );
-
-            OnSelectedSpreadSheetChange();
+                OnSelectedSpreadSheetChange();
+            }
 
             Repaint();
 
@@ -108,8 +111,8 @@ namespace charcolle.SpreadSheetConverter {
                 if( selected != selectedMenu ) {
                     UndoHelper.WindowUndo( this, UndoHelper.UNDO_WIN_CHANGE );
                     EditorGUIUtility.keyboardControl = 0;
+                    selectedMenu = selected;
                 }
-                selectedMenu = selected;
                 switch( selectedMenu ) {
                     case 0:
                         SheetContents();
@@ -186,6 +189,9 @@ namespace charcolle.SpreadSheetConverter {
         private int selectedSpreadSheet = 0;
         private int selectedConverter   = 0;
         private void SheetContents() {
+            if( SpreadSheetConfigItem == null )
+                return;
+
             EditorGUILayout.BeginVertical();
             {
                 if( !WindowHelper.IsSpreadSheetDataExists ) {

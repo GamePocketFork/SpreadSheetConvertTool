@@ -12,47 +12,53 @@ namespace charcolle.SpreadSheetConverter {
         internal static class Styles {
 
             static Styles() {
-                NoSpaceBox                  = new GUIStyle( GUI.skin.box );
-                NoSpaceBox.margin           = new RectOffset( 0, 0, 0, 0 );
-                NoSpaceBox.padding          = new RectOffset( 1, 1, 1, 1 );
+                NoSpaceBox = new GUIStyle( GUI.skin.box ) {
+                    margin = new RectOffset( 0, 0, 0, 0 ),
+                    padding = new RectOffset( 1, 1, 1, 1 )
+                };
 
-                LabelWordWrap               = new GUIStyle( GUI.skin.label );
-                LabelWordWrap.wordWrap      = true;
-                LabelWordWrap.richText      = true;
+                LabelWordWrap = new GUIStyle( GUI.skin.label ) {
+                    wordWrap = true,
+                    richText = true
+                };
 
-                TextFieldWordWrap           = new GUIStyle( GUI.skin.textField );
-                TextFieldWordWrap.wordWrap  = true;
+                TextFieldWordWrap = new GUIStyle( GUI.skin.textField ) {
+                    wordWrap = true
+                };
 
-                LeftArea                    = new GUIStyle( "WindowBackground" );
-                LeftArea.margin             = new RectOffset( 0, 0, 0, 0 );
-                LeftArea.padding            = new RectOffset( 0, 0, 0, 0 );
+                LeftArea = new GUIStyle( GUI.skin.box ) {
+                    margin = new RectOffset( 0, 0, 0, 0 ),
+                    padding = new RectOffset( 1, 1, 0, 0 )
+                };
 
-                RightArea                   = EditorStyles.textArea;
-                RightArea.margin            = new RectOffset( 1, 0, 0, 0 );
-                RightArea.padding           = new RectOffset( 0, 0, 0, 0 );
+                RightArea = new GUIStyle( EditorStyles.textArea ) {
+                    margin = new RectOffset( 1, 0, 0, 0 ),
+                    padding = new RectOffset( 0, 0, 0, 0 )
+                };
 
-                Header                      = new GUIStyle( "IN GameObjectHeader" );
-                Header.margin               = new RectOffset( 1, 0, 2, 0 );
+                Header = new GUIStyle( EditorStyles.helpBox );
 
-                SheetConverterLabel         = new GUIStyle( "ProjectBrowserHeaderBgMiddle" );
-                SheetConverterLabel.padding = new RectOffset( 0, 0, 2, 2 );
+                SheetConverterLabel = new GUIStyle( "ProjectBrowserHeaderBgMiddle" ) {
+                    padding = new RectOffset( 0, 0, 2, 2 )
+                };
 
-                Footer                      = new GUIStyle( "Tooltip" );
-                Footer.margin               = new RectOffset( 0, 0, 0, 0 );
-                Footer.padding              = new RectOffset( 1, 1, 1, 1 );
+                Footer = new GUIStyle( GUI.skin.box ) {
+                    margin = new RectOffset( 0, 0, 0, 0 ),
+                    padding = new RectOffset( 1, 1, 1, 1 )
+                };
 
-                ConverterList               = new GUIStyle( "ShurikenModuleTitle" );
-                ConverterList.fixedHeight   = 0f;
-                ConverterList.margin        = new RectOffset( 1, 1, 0, 0 );
+                ConverterList = new GUIStyle( "ShurikenModuleTitle" ) {
+                    fixedHeight = 0f,
+                    margin = new RectOffset( 1, 1, 0, 0 )
+                };
 
                 PlusButton                  = new GUIStyle( "OL Plus" );
 
-                ToolBar                     = new GUIStyle( EditorStyles.toolbarButton );
-                ToolBar.margin              = new RectOffset( 0, 0, 0, 0 );
-                ToolBar.padding             = new RectOffset( 0, 0, 0, 0 );
+                ToolBar = new GUIStyle( EditorStyles.toolbarButton );
 
-                SheetName                   = new GUIStyle( GUI.skin.box );
-                SheetName.margin            = new RectOffset( 0, 0, 0, 0 );
+                SheetName = new GUIStyle( GUI.skin.box ) {
+                    margin = new RectOffset( 0, 0, 0, 0 )
+                };
             }
 
             public static GUIStyle NoSpaceBox {
@@ -135,6 +141,19 @@ namespace charcolle.SpreadSheetConverter {
             }
 
             public static Texture2D ScriptIcon {
+                get;
+                private set;
+            }
+
+        }
+
+        internal static class Colors {
+
+            static Colors() {
+                DefaultFontColor = GUI.contentColor;
+            }
+
+            public static Color DefaultFontColor {
                 get;
                 private set;
             }

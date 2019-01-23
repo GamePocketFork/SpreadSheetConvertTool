@@ -5,6 +5,7 @@ namespace charcolle.SpreadSheetConverter {
 
     internal abstract class EditorWindowItem<T> {
 
+        [SerializeField]
         protected T data;
 
         public EditorWindowItem( T data ) {

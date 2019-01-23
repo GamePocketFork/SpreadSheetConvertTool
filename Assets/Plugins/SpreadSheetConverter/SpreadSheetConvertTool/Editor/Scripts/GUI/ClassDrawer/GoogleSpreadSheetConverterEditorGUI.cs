@@ -9,6 +9,7 @@ using FileUtility = charcolle.SpreadSheetConverter.FileUtility;
 
 namespace charcolle.SpreadSheetConverter {
 
+    [Serializable]
     internal class GoogleSpreadSheetConverterEditorGUI : EditorWindowItem<GoogleSpreadSheetConverter> {
 
         public GoogleSpreadSheetConverterEditorGUI( GoogleSpreadSheetConverter data ) : base( data ) { }
@@ -26,7 +27,6 @@ namespace charcolle.SpreadSheetConverter {
         // drawer
         //======================================================================
 
-        private int converterEditMenu;
         private Vector2 scrollView;
         protected void DrawSettings() {
             Header();
@@ -35,16 +35,20 @@ namespace charcolle.SpreadSheetConverter {
             {
                 scrollView = EditorGUILayout.BeginScrollView( scrollView );
                 {
+                    GUI.backgroundColor = Color.grey;
                     EditorGUILayout.BeginVertical( GUIHelper.Styles.Header );
                     {
-                        GUILayout.Space( 2 );
+                        GUILayout.Space( 3 );
 
+                        GUI.contentColor = Color.white;
                         if( IsEdit )
                             SheetDesc = EditorGUILayout.TextArea( SheetDesc );
                         else
                             GUILayout.Label( SheetDesc, GUIHelper.Styles.LabelWordWrap );
+                        GUI.contentColor = GUIHelper.Colors.DefaultFontColor;
                     }
                     EditorGUILayout.EndVertical();
+                    GUI.backgroundColor = Color.white;
 
                     DrawSheetConfig();
                 }

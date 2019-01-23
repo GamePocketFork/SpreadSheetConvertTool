@@ -35,15 +35,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ConverterName: RuntimeConverter
   SheetName: sheet1
-  SheetDesc: about this converter
+  SheetDesc: runtime converter sample. See the converter script.
   ScriptName: RuntimeConverter
   MultiSheetConvertMode: 0
   SheetIndexRange: {x: 1, y: 1}
   MinSheetIndex: 1
   MaxSheetIndex: 20
-  RowRange: {x: 1, y: 2}
+  RowRange: {x: 7, y: 8}
   ColRange: {x: 1, y: 2}
-  StartRow: 1
+  StartRow: 7
   StartCol: 1
   MaxRow: 20
   MaxCol: 20
@@ -63,8 +63,8 @@ MonoBehaviour:
   m_Name: CSVConverter
   m_EditorClassIdentifier: 
   ConverterName: CSVConverter
-  SheetName: sheet1
-  SheetDesc: about this converter
+  SheetName: 
+  SheetDesc: csv converter sample. See the converter script.
   ScriptName: CSVConverter
   MultiSheetConvertMode: 0
   SheetIndexRange: {x: 1, y: 1}

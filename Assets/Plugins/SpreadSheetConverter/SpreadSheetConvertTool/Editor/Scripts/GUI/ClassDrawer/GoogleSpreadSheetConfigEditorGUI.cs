@@ -9,6 +9,7 @@ using ConverterUtility = charcolle.SpreadSheetConverter.ConverterEditorUtility;
 
 namespace charcolle.SpreadSheetConverter {
 
+    [Serializable]
     internal class GoogleSpreadSheetConfigEditorGUI : EditorWindowItem<GoogleSpreadSheetConfig> {
 
         public GoogleSpreadSheetConfigEditorGUI( GoogleSpreadSheetConfig data ) : base( data ) {
@@ -52,6 +53,7 @@ namespace charcolle.SpreadSheetConverter {
         //======================================================================
 
         public bool IsContextClick;
+        [SerializeField]
         public int SelectedCoverter = -1;
         private Vector2 converterListView;
         private void DrawConverterList() {

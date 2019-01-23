@@ -1,0 +1,11 @@
+{
+	"name": "com.charcolle.spreadsheetconverter",
+	"displayName": "Spread Sheet Converter",
+	"version": "1.1",
+	"unity": "2017.4",
+	"description": "Convert data from GoogleSpreadSheet.",
+	"keywords": ["editorextensions", "utilities", "googlespreadsheet", "spreadsheetconverter"],
+	"category": "editorextensions",
+	"dependencies": {
+	}
+}

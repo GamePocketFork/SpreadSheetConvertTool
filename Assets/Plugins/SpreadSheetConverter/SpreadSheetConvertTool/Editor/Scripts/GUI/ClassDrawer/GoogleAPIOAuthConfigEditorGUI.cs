@@ -7,6 +7,7 @@ using GUIHelper  = charcolle.SpreadSheetConverter.GUIHelper;
 
 namespace charcolle.SpreadSheetConverter {
 
+    [Serializable]
     internal class GoogleAPIOAuthConfigEditorGUI : EditorWindowItem<GoogleAPIOAuthEditorConfig> {
 
         public GoogleAPIOAuthConfigEditorGUI( GoogleAPIOAuthEditorConfig data ) : base( data ) { }
